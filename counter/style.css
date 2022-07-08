@@ -1,0 +1,32 @@
+.container{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(239, 239, 239);
+}
+h1{
+    text-align: center;
+}
+#value{
+    margin-left: 48%;
+    font-size: 55px;
+    font-weight: 500;
+}
+.button-container{
+    margin-left: 25%;
+    margin-top: 25px;
+}
+.btn{
+    padding: 6px;
+    border: solid 2px black;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.decrease:hover{
+    color: red;
+}
+.increase:hover{
+    color: green;
+}
+.reset:hover{
+    color: gray;
+}
