@@ -8,15 +8,39 @@ slides.forEach(function(slide,index){
 let counter = 0;
 nextBtn.addEventListener("click",function(){
     counter++;
+    console.log(counter);
     translateX();
 });
 prevBtn.addEventListener("click",function(){
     counter--;
+    console.log(counter);
     translateX();
 });
 
 function translateX(){
+    //working with sildes
+    // if(counter === slides.length){
+    //     counter=0;
+    // }
+    // if(counter<0){
+    //     counter = slides.length-1;
+    // }
+    //translate
+    if(counter< slides.length-1){
+        nextBtn.style.display = "block"; 
+    }
+    else{
+        nextBtn.style.display="none"; //hide next
+    }
+    if(counter>0){
+        prevBtn.style.display ="block";
+    }
+    else{
+        prevBtn.style.display="none";//hide prev
+    }
+
     slides.forEach(function(slide){
         slide.style.transform = `translateX(-${counter*100}%)`; //style--->transform: translateX(-100%);
     });
 }
+prevBtn.style.display = "none";
